@@ -89,9 +89,13 @@
 	
 	return YES;
 }
-
+<<<<<<< HEAD
 - (BOOL)prefersStatusBarHidden
 {
     return _rootViewControllerPrefersStatusBarHidden;
 }
 @end
+=======
+
+@end
+>>>>>>> rama/master
