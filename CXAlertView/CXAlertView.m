@@ -14,11 +14,13 @@
 #import <QuartzCore/QuartzCore.h>
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
-	#define LBM NSLineBreakByTruncatingTail
-	#define BT_LBM NSLineBreakByWordWrapping
+    #define LBM NSLineBreakByTruncatingTail
+    #define BT_LBM NSLineBreakByWordWrapping
+    #define TA_CENTER NSTextAlignmentCenter
 #else
-	#define LBM UILineBreakModeTailTruncation
-	#define BT_LBM UILineBreakModeWordWrap
+    #define LBM UILineBreakModeTailTruncation
+    #define BT_LBM UILineBreakModeWordWrap
+    #define TA_CENTER UITextAlignmentCenter
 #endif
 
 #import "LFGlassView.h"
@@ -885,7 +887,7 @@ self.oldKeyWindow = [[UIApplication sharedApplication] keyWindow];
     button.defaultRightLineVisible = _showButtonLine;
     [button setTitle:title forState:UIControlStateNormal];
 
-	button.titleLabel.textAlignment=UITextAlignmentCenter;
+	button.titleLabel.textAlignment=TA_CENTER;
 	[button.titleLabel setNumberOfLines:0];
 	button.titleLabel.lineBreakMode=BT_LBM;
 	[button setTitleEdgeInsets:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
